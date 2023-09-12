@@ -21,25 +21,11 @@ public class PracticeFormTest extends BaseTest {
                 .setCity("Lucknow")
                 .pressSubmitButton();
 
-
-
-
-
         page.verifyRegistrationResultTableAppears()
                 .verifyResult("Student Name", "Serega Testerov")
                 .verifyResult("Student Email", "serega@testmail.com")
                 .verifyResult("Gender", "male")
                 .verifyResult("Mobile", "9181104115")
                 .verifyResult("Date of Birth", "30 October,2000");
-
-
-
-//        $("#output").shouldHave(
-//                text("Serega"),
-//                text("Testerov"),
-//                text("testQA@63rus.com"),
-//                text("myAddrress"),
-//                text("asd")
-//        );
     }
 }
