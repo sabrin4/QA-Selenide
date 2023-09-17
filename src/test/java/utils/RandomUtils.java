@@ -10,7 +10,7 @@ public class RandomUtils {
     private static Faker faker = new Faker(new Locale("RU"));
 
     public static void main(String[] args) {
-        System.out.println(getFakeEmail());
+        //для отладки
     }
 
     public static String getRandomString(int length) {
@@ -33,6 +33,10 @@ public class RandomUtils {
         return getRandomString(length) + "@gmail.com";
     }
 
+    public static String getRandomAddress() {
+        return getRandomString(5) + " street";
+    }
+
     public static String getRandomElementFromArray(String [] array) {
         int i = getRandomInteger(0, array.length-1);
         
@@ -41,7 +45,17 @@ public class RandomUtils {
 
     public static String getRandomGender() {
         String [] genders = {"Male", "Female", "Other"};
+
         return getRandomElementFromArray(genders);
+    }
+
+    public static String getRandomPhoneNumber() {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < 10; i++) {
+            sb.append(String.valueOf(RandomUtils.getRandomInteger(1,9)));
+        }
+
+        return sb.toString();
     }
 
     //why doesn't work with RU locale ?
