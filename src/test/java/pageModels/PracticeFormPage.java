@@ -3,7 +3,6 @@ package pageModels;
 import com.codeborne.selenide.SelenideElement;
 import pageModels.components.CalendarComponent;
 import pageModels.components.RegistrationResultTable;
-
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
@@ -24,7 +23,6 @@ public class PracticeFormPage {
     private SelenideElement submitButton;
 
     String usrState;
-
     CalendarComponent calendar = new CalendarComponent();
     RegistrationResultTable table = new RegistrationResultTable();
 
